@@ -1,4 +1,5 @@
 resource "google_compute_instance" "core_5g_instance" {
+    count        = $lenght(var.name_count)
     name         = "core-5g-instance"
     machine_type = "e2-micro"
     zone         = "us-central1-a"
