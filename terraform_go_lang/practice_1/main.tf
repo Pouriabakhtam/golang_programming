@@ -1,7 +1,7 @@
 resource "google_compute_instance" "core_5g_instance" {
-    count        = $lenght(var.name_count)
-    name         = "core-5g-instance"
-    machine_type = "e2-micro"
+    count        = length(var.name_count)
+    name         = "core-5g-instance-${count.index}"
+    machine_type = var.machine_type["dev"]
     zone         = "us-central1-a"
     boot_disk {
         initialize_params {
@@ -19,7 +19,7 @@ resource "google_compute_instance" "core_5g_instance" {
 }
 
 output "instance_name" {
-    value = google_compute_instance.core_5g_instance.name
+    value = google_compute_instance.core_5g_instance.*.name
 }
-output "instance_zone" { value = google_compute_instance.core_5g_instance.zone }
-output "instance_machine_type" { value = google_compute_instance.core_5g_instance.machine_type }
+output "instance_zone" { value = google_compute_instance.core_5g_instance.*.zone }
+output "instance_machine_type" { value = google_compute_instance.core_5g_instance.*.machine_type }
