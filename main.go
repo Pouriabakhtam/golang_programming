@@ -2,10 +2,12 @@ package main
 
 import (
 	"application_pouri/calculator"
+	"application_pouri/rand_numb"
 	"fmt"
 )
 
 func main() {
+	fmt.Println(rand_numb.Random_n(120))
 	for {
 		fmt.Println("Welcome to the Calculator!")
 		fmt.Println("Please select an operation:")
