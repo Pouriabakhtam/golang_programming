@@ -1,0 +1,10 @@
+POST http://localhost:8484/even
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBvdXJpYS5iYWtodGFtQGdtYWlsLmNvbSIsImV4cCI6MTc4MjUxODY3MiwidXNlcl9pZCI6MX0.2U2FYz-ZWJmhcZLUM8z7dODKcgprudOxHgSwEytUqvM
+
+{
+    "Name" : "login-by-Pouria", 
+    "Description" : "added Authorization and testing the even creation",
+    "Location" : "dev",
+    "DateTime":"2026-06-26T20:22:21.000Z"
+}

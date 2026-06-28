@@ -1,0 +1,9 @@
+PUT http://localhost:8484/even/2
+Content-Type: application/json
+
+{
+    "name": "Pouria",
+    "description":"Bakhtam",
+    "location":"Ottawa",
+    "dateTime":"2026-06-02T20:22:21.000Z"
+}
